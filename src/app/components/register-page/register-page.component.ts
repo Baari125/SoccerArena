@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -8,16 +8,19 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.css'],
 })
+@Injectable({ providedIn: 'root' })
 export class RegisterPageComponent implements OnInit {
   public signUpForm!: FormGroup;
   constructor(
-    private formBuilder: FormBuilder,
     private http: HttpClient,
+    private formBuilder: FormBuilder,
     private router: Router
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.signUpForm = this.formBuilder.group({
+      name: [''],
+      surname: [''],
       email: [''],
       password: [''],
     });

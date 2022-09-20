@@ -3,6 +3,10 @@
   <h3>Create An Account</h3>
   <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
     <div>
+      <label for="name">Name</label>
+      <input formControlName="name" type="text" required />
+      <label for="surname">Surname</label>
+      <input formControlName="surname" type="text" required />
       <label for="email">Email</label>
       <input formControlName="email" type="email" required />
       <label for="password">Password</label>
