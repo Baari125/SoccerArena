@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CustomMaterialModule } from './core/material.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
@@ -16,6 +19,7 @@ import { RegisterPageComponent } from './components/register-page/register-page.
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    CustomMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

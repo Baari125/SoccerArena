@@ -1,13 +1,22 @@
+<mat-toolbar color="accent">
+  <mat-toolbar-row>
+    <span>Soccer Arena</span>
+  </mat-toolbar-row>
+</mat-toolbar>
 <div>
-  <h3>Login Here</h3>
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <div>
-      <label for="email">Email</label>
-      <input required type="text" />
-      <label for="password">Password</label>
-      <input type="password" />
-    </div>
-    <button>Submit</button>
-    <span>Don't have an account? <a routerLink="/register">signUp</a></span>
-  </form>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div>
+        <label for="email">Email</label> <br />
+        <input placeholder="email" required type="text" /><br />
+        <label for="password">Password</label><br />
+        <input type="password" /><br />
+      </div>
+      <button button>Submit</button>
+      <span>Don't have an account? <a routerLink="/register">signUp</a></span>
+    </form>
+  </mat-card>
 </div>
