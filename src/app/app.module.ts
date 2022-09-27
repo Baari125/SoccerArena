@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
+import { AccountService } from './_services/account.service';
 
 @NgModule({
   declarations: [AppComponent, LoginPageComponent, RegisterPageComponent],

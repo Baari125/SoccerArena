@@ -1,1 +1,6 @@
 @import "~@angular/material/prebuilt-themes/purple-green.css";
+
+.mat-toolbar.mat-accent {
+  background: #163d26;
+  color: rgb(255, 255, 255);
+}

@@ -1,18 +1,42 @@
-<div>
-  <h1>Hello Welcome</h1>
-  <h3>Create An Account</h3>
-  <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
-    <div>
-      <label for="name">Name</label>
-      <input formControlName="name" type="text" required />
-      <label for="surname">Surname</label>
-      <input formControlName="surname" type="text" required />
-      <label for="email">Email</label>
-      <input formControlName="email" type="email" required />
-      <label for="password">Password</label>
-      <input formControlName="password" type="password" />
-    </div>
-    <button>Submit</button>
-    <span>Already have an account? <a routerLink="/login">signUp</a></span>
-  </form>
+<mat-toolbar color="accent">
+  <mat-toolbar-row>
+    <span>Soccer Arena</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="registerForm">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title style="color: black">Create an account</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+        <input
+          placeholder="Name *"
+          formControlName="name"
+          type="text"
+          required
+        /><br /><br />
+        <input
+          placeholder="Surname *"
+          formControlName="surname"
+          type="text"
+          required
+        /><br /><br />
+        <input
+          placeholder="Email *"
+          formControlName="email"
+          type="email"
+          required
+        /><br /><br />
+        <input
+          placeholder="Password *"
+          formControlName="password"
+          type="password"
+          required
+        /><br /><br />
+        <button>Submit</button>
+        <span>Already have an account? <a routerLink="/login">signUp</a></span>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>

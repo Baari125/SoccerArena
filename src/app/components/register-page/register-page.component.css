@@ -1,0 +1,15 @@
+.registerForm {
+  margin: auto;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  size: auto;
+}
+
+.example-card {
+  background-color: white;
+  margin: 0 auto;
+}
